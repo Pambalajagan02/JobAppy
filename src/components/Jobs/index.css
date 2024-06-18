@@ -1,0 +1,8 @@
+.job-container-1 {
+  min-height: 100vh;
+  background-color: #000000;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}

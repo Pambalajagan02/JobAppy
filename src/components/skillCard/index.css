@@ -1,0 +1,17 @@
+.list-sikll-con {
+  display: flex;
+  list-style-type: none;
+  margin: 16px;
+}
+.img-style-skil {
+  width: 60px;
+  align-self: center;
+}
+.name-skill {
+  font-size: 20px;
+  color: white;
+  font-family: roboto;
+  font-weight: 500;
+  align-self:center ;
+  margin-left: 10px;
+}

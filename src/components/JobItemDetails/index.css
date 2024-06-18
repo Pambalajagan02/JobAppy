@@ -1,0 +1,142 @@
+.loader-container-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 70vh;
+}
+
+.main-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item-conatiner {
+  background-color: #000000;
+  min-height: 100vh;
+  padding: 30px;
+}
+.div-container1 {
+  background-color: #272727;
+  padding: 20px;
+  margin-bottom: 20px;
+  list-style-type: none;
+  border-radius: 3px;
+  width: 90%;
+  margin-top: 30px;
+}
+.content-div-2 {
+  display: flex;
+  flex-direction: column;
+}
+.div-container-3 {
+  display: flex;
+  justify-content: flex-start;
+}
+.rating-container {
+  display: flex;
+  flex-direction: row;
+}
+.job-logo {
+  width: 50px;
+  align-self: flex-start;
+}
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  font-family: roboto;
+  align-self: flex-start;
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+.para-con {
+  margin-left: 10px;
+  padding: 5px;
+}
+.icon-style {
+  margin-top: 4px;
+  margin-left: 5px;
+}
+.icon-container {
+  display: flex;
+  margin-right: 20px;
+}
+.title-rating {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  font-family: roboto;
+  align-self: center;
+  margin-top: 5px;
+
+  margin-left: 5px;
+}
+.bottom-container {
+  display: flex;
+}
+.title-rating1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  font-family: roboto;
+  align-self: center;
+  margin-top: 5px;
+
+  margin-left: auto;
+}
+.horizontal {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #7e858e;
+  width: 100%;
+}
+.description {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  font-family: roboto;
+  align-self: flex-start;
+  margin-top: 5px;
+}
+.description1 {
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  font-family: roboto;
+  align-self: flex-start;
+  margin-top: 1px;
+  padding: 5px;
+}
+.discription-container {
+  display: flex;
+}
+.blue-col {
+  color: #6366f1;
+  text-decoration: none;
+  margin-top: 3px;
+  margin-left: 10px;
+  align-self: flex-start;
+}
+.margin-left-con {
+  margin-left: auto;
+}
+.ul-container-item {
+  padding-left: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+}
+.imglife {
+  align-self: flex-start;
+  width: 100%;
+}
+.life-conatine {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .life-conatine {
+    flex-direction: row;
+  }
+}

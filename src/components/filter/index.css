@@ -1,0 +1,62 @@
+.filtergroup-con {
+  display: flex;
+  flex-direction: column;
+}
+.serch-container {
+  display: flex;
+  border-radius: 5px;
+  border-color: #475569;
+  border-style: solid;
+  border-width: 2px;
+}
+.input-serch {
+  padding: 10px;
+  background-color: transparent;
+  border-width: 0px;
+  font-size: 20px;
+  font-family: roboto;
+  width: 90%;
+  color: #7e858e;
+  font-weight: 600;
+}
+.button-style {
+  padding: 10px;
+  background-color: transparent;
+  border-width: 0px;
+  font-size: 17px;
+  font-family: roboto;
+}
+.separate {
+  border-style: solid;
+  border-color: #64748b;
+  border-width: 2px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.typeof-heading {
+  font-size: 25px;
+  font-family: roboto;
+  color: white;
+}
+.label-style {
+  font-size: 26px;
+  font-family: roboto;
+  color: white;
+  font-weight: 400;
+  margin-left: 20px;
+  margin-top: 0px;
+}
+.check-boxstyle {
+  height: 25px;
+  width: 25px;
+  margin: 0px;
+  margin-top: 10px;
+}
+.check-container {
+  margin-bottom: 10px;
+}
+.ul-filter-container {
+  padding-left: 0px;
+  list-style-type: none;
+}
