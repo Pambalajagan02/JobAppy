@@ -46,6 +46,29 @@ const salaryRangesList = [
   },
 ]
 
+const locationList = [
+  {
+    label: 'Hyderabad',
+    locationId: 'HYDERABAD',
+  },
+  {
+    label: 'Bangalore',
+    loactionId: 'BANGLORE',
+  },
+  {
+    label: 'Chennai',
+    loactionId: 'CHENNAI',
+  },
+  {
+    label: 'Delhi',
+    loactionId: 'DELHI',
+  },
+  {
+    label: 'Mumbai',
+    loactionId: 'MUMBAI',
+  },
+]
+
 const switchstate = {
   intial: 'INTIAL',
   inprogress: 'INPROGRESS',
@@ -60,6 +83,7 @@ class AllJobsComponent extends Component {
     emtype: [],
     minpak: 0,
     search: '',
+    locations: [],
   }
 
   componentDidMount() {
@@ -67,7 +91,7 @@ class AllJobsComponent extends Component {
   }
 
   getJobsFunction = async () => {
-    const {emtype, minpak, search} = this.state
+    const {emtype, minpak, search, locations} = this.state
     this.setState({appstatus: switchstate.inprogress})
     const jwttoken = Cookies.get('jwtToken')
     const options = {
@@ -79,7 +103,9 @@ class AllJobsComponent extends Component {
 
     const url = `https://apis.ccbp.in/jobs?employment_type=${emtype.join(
       ',',
-    )}&minimum_package=${minpak}&search=${search}`
+    )}&minimum_package=${minpak}&search=${search}&loaction=${locations.join(
+      ',',
+    )}`
     const response = await fetch(url, options)
     if (response.ok) {
       const data = await response.json()
@@ -96,7 +122,6 @@ class AllJobsComponent extends Component {
         }
         return obj
       })
-      console.log(upadtelistof)
       this.setState({appstatus: switchstate.success, jobitems: upadtelistof})
     } else {
       this.setState({appstatus: switchstate.failure})
@@ -196,12 +221,21 @@ class AllJobsComponent extends Component {
     this.getJobsFunction()
   }
 
+  onChangeLocation = place => {
+    this.setState(
+      prev => ({locations: [...prev.locations, place]}),
+      this.getJobsFunction,
+    )
+  }
+
   render() {
     return (
       <div>
         <Filterjobs
           employmentTypesList={employmentTypesList}
           salaryRangesList={salaryRangesList}
+          locationList={locationList}
+          onChangeLocation={this.onChangeLocation}
           onChnageSearch={this.onChnageSearch}
           onChangeEmplopyee={this.onChangeEmplopyee}
           onChangeSalary={this.onChangeSalary}

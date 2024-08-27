@@ -12,7 +12,11 @@ const Filterjobs = props => {
     onChangeEmplopyee,
     onChangeSalary,
     onClickSearch,
+    locationList,
+    onChangeLocation,
   } = props
+  console.log(salaryRangesList)
+  console.log(employmentTypesList)
 
   const changeEmployeefunc = event => {
     onChangeEmplopyee(event.target.value)
@@ -36,6 +40,10 @@ const Filterjobs = props => {
 
   const serchTheInput = () => {
     onClickSearch()
+  }
+
+  const onLocation = event => {
+    onChangeLocation(event.target.value)
   }
 
   return (
@@ -70,8 +78,11 @@ const Filterjobs = props => {
               value={each.employmentTypeId}
               className="check-boxstyle"
               onChange={changeEmployeefunc}
+              id={each.employmentTypeId}
             />
-            <label className="label-style">{each.label}</label>
+            <label htmlFor={each.employmentTypeId} className="label-style">
+              {each.label}
+            </label>
           </li>
         ))}
       </ul>
@@ -86,12 +97,33 @@ const Filterjobs = props => {
               className="check-boxstyle"
               name="salary"
               onChange={changeSalaryfunc}
+              id={each.salaryRangeId}
             />
-            <label className="label-style">{each.label}</label>
+            <label htmlFor={each.salaryRangeId} className="label-style">
+              {each.label}
+            </label>
           </li>
         ))}
       </ul>
       <hr className="separate" />
+
+      <h1 className="typeof-heading">location</h1>
+      <ul className="ul-filter-container">
+        {locationList.map(each => (
+          <li className="check-container" key={each.loactionId}>
+            <input
+              type="checkbox"
+              value={each.label}
+              className="check-boxstyle"
+              id={each.loactionId}
+              onChange={onLocation}
+            />
+            <label htmlFor={each.loactionId} className="label-style">
+              {each.label}
+            </label>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
